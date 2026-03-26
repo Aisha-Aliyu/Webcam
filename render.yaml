@@ -1,0 +1,21 @@
+services:
+  - type: web
+    name: cocoa-webcam-studio
+    runtime: python
+    buildCommand: pip install -r requirements.txt
+    startCommand: python run_final.py
+    envVars:
+      - key: PYTHON_VERSION
+        value: 3.11.0
+      - key: ALLOWED_ORIGINS
+        sync: false
+      - key: ALLOWED_HOSTS
+        sync: false
+      - key: SECRET_KEY
+        generateValue: true
+      - key: DEBUG
+        value: false
+      - key: API_RATE_LIMIT
+        value: 100
+      - key: RATE_LIMIT_WINDOW
+        value: 3600
