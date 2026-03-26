@@ -2,7 +2,7 @@
 
 A professional webcam application that transforms how you capture and interact with your camera. Built with real-time filters, multi-camera support, and a focus on user experience.
 
-![Application Banner](screenshots/webcam-banner.png)
+![Application Banner](screenshots/cocoa-banner.png)
 
 ## Overview
 
