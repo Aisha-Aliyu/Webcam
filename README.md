@@ -4,6 +4,13 @@ A professional webcam application that transforms how you capture and interact w
 
 ![Application Banner](screenshots/cocoa-banner.png)
 
+
+## Live Demo
+
+The application is deployed and accessible at:
+[https://cocoa-webcam-studio.onrender.com](https://cocoa-webcam-studio.onrender.com)
+
+
 ## Overview
 
 Cocoa WebCam Studio provides a complete camera solution with real-time visual effects. The application captures high-quality photos and videos while offering instant preview and organization tools. Built for creators, professionals, and anyone who wants more control over their webcam experience.
