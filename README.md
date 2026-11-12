@@ -140,18 +140,12 @@ API Endpoints
 Endpoint Method Description
 / GET Main application interface
 /health GET Health check and version information
-/api/stats GET Application statistics and rate limit status
+
+These endpoints exist only when you run the FastAPI server locally. The live demo on GitHub Pages is the static page alone.
 
 Configuration
 
-Environment variables in .env:
-
-```
-SECRET_KEY=your-secure-key
-API_RATE_LIMIT=100
-RATE_LIMIT_WINDOW=3600
-ALLOWED_ORIGINS=http://localhost:3000,http://localhost:8000
-```
+No configuration is needed. For local runs, `PORT` sets the server port (default 8000).
 
 Browser Support
 
@@ -165,14 +159,16 @@ Mobile browsers with WebRTC support are fully supported including camera switchi
 Project Structure
 
 ```
-cocoa-webcam-studio/
-├── app/
-│   └── main_day3_final.py    # Main application
-├── screenshots/               # Application screenshots
-├── requirements.txt           # Python dependencies
-├── run_final.py              # Application entry point
-├── .env                      # Environment configuration
-└── README.md                 # Project documentation
+Webcam/
+├── .github/workflows/pages.yml   # Publishes the app to GitHub Pages
+├── cocoa-webcam/
+│   ├── app/
+│   │   ├── static/index.html     # The app: camera, filters, capture, gallery
+│   │   └── main.py               # FastAPI server for local runs
+│   ├── requirements.txt          # Python dependencies
+│   └── run.py                    # Local entry point
+├── screenshots/                  # Application screenshots
+└── README.md                     # Project documentation
 ```
 
 Contributing
