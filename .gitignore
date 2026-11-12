@@ -1,0 +1,19 @@
+# Secrets and local settings
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+
+# Python
+__pycache__/
+*.py[cod]
+venv/
+.venv/
+
+# Node, in case tooling is added later
+node_modules/
+
+# Logs and OS files
+*.log
+.DS_Store

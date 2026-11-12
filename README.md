@@ -8,7 +8,7 @@ A professional webcam application that transforms how you capture and interact w
 ## Live Demo
 
 The application is deployed and accessible at:
-[https://cocoa-webcam-studio.onrender.com](https://cocoa-webcam-studio.onrender.com)
+[https://aisha-aliyu.github.io/Webcam/](https://aisha-aliyu.github.io/Webcam/)
 
 
 ## Overview
@@ -89,7 +89,7 @@ Designed with attention to how people actually use camera applications.
 ## Technical Implementation
 
 ### Architecture
-The application uses a single-file approach for simplified deployment while maintaining separation of concerns in the backend. The frontend handles all image processing and camera interactions, with the backend providing rate limiting and health monitoring.
+The whole app is one page, `cocoa-webcam/app/static/index.html`. The browser handles all image processing and camera interactions, so the live demo is served as a static site on GitHub Pages and loads instantly. For local runs, the FastAPI server in `cocoa-webcam/app/main.py` serves the same page and adds rate limiting and a health check.
 
 ### Security
 - Rate limiting per IP address to prevent abuse
@@ -114,7 +114,7 @@ The application uses a single-file approach for simplified deployment while main
 1. Clone the repository:
 ```bash
 git clone https://github.com/Aisha-Aliyu/Webcam.git
-cd Webcam
+cd Webcam/cocoa-webcam
 ```
 
 1. Install dependencies:
@@ -123,23 +123,17 @@ cd Webcam
 pip install -r requirements.txt
 ```
 
-1. Create environment file:
-
-```bash
-cp .env.example .env
-```
-
 1. Run the application:
 
 ```bash
-python run_final.py
+python run.py
 ```
 
 1. Open your browser to http://localhost:8000
 
 Production Deployment
 
-The application is configured for deployment on platforms like Render, Heroku, or PythonAnywhere. Environment variables should be set in the hosting platform's configuration panel.
+The live demo is hosted on GitHub Pages. The workflow in `.github/workflows/pages.yml` publishes `cocoa-webcam/app/static` every time that folder changes on `main`.
 
 API Endpoints
 
